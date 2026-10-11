@@ -1,0 +1,40 @@
+//VERY GOOD AND CONCEPT BUILDING QUES!
+// Print the pattern:
+// 1234567
+// 123 567
+// 12   67
+// 1     7
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter the value of n:";cin>>n;
+    for(int i=1 ; i<=2*n-1 ; i++){
+        cout<<i;
+    }
+    cout<<endl;
+    int m = n-1;
+    int nsp = 1;
+    for (int i=1 ; i<=m ; i++){
+        //NUMBERS
+        int a=1;
+        for (int j=1 ; j<= m-i+1 ; j++){
+            cout<<a;
+            a++;
+        }
+        //SPACES
+        for(int k=1 ; k<=nsp ; k++){
+            cout<< " ";
+            a++;
+        }
+        nsp+=2;
+        //NUMBERS
+        for (int j=1 ; j<= m-i+1 ; j++){
+            cout<<a;
+            a++;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
